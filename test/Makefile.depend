@@ -1,0 +1,1 @@
+testzndkcdev.o: testzndkcdev.c ../lib/libzndkcdev.h

@@ -1,0 +1,1 @@
+libzndkcdev.o: libzndkcdev.c ../drv/zndkcdev.h libzndkcdev.h
