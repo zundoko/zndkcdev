@@ -36,87 +36,87 @@ make uninstall
 ## Whole operation log
 
 ```bash
-$ make clean
+~/work/learning/linux/chrdev/zndkcdev$ make clean
 rm -rf *~
 ---------- drv
-make[1]: Entering directory '/home/<foo>/work/learning/linux/chrdev/drv'
-make -C /lib/modules/4.2.0-36-generic/build/ M=/home/<foo>/work/learning/linux/chrdev/drv clean
+make[1]: Entering directory '/home/<foo>/work/learning/linux/chrdev/zndkcdev/drv'
+make -C /lib/modules/4.2.0-36-generic/build/ M=/home/<foo>/work/learning/linux/chrdev/zndkcdev/drv clean
 make[2]: Entering directory '/usr/src/linux-headers-4.2.0-36-generic'
 make[2]: Leaving directory '/usr/src/linux-headers-4.2.0-36-generic'
 rm -rf *~ *.o *.mod* *.order *.symvers
-make[1]: Leaving directory '/home/<foo>/work/learning/linux/chrdev/drv'
-/home/<foo>/work/learning/linux/chrdev
+make[1]: Leaving directory '/home/<foo>/work/learning/linux/chrdev/zndkcdev/drv'
+/home/<foo>/work/learning/linux/chrdev/zndkcdev
 ---------- lib
-make[1]: Entering directory '/home/<foo>/work/learning/linux/chrdev/lib'
+make[1]: Entering directory '/home/<foo>/work/learning/linux/chrdev/zndkcdev/lib'
 rm -rf libzndkcdev.o libzndkcdev.so *~
-make[1]: Leaving directory '/home/<foo>/work/learning/linux/chrdev/lib'
-/home/<foo>/work/learning/linux/chrdev
+make[1]: Leaving directory '/home/<foo>/work/learning/linux/chrdev/zndkcdev/lib'
+/home/<foo>/work/learning/linux/chrdev/zndkcdev
 ---------- test
-make[1]: Entering directory '/home/<foo>/work/learning/linux/chrdev/test'
+make[1]: Entering directory '/home/<foo>/work/learning/linux/chrdev/zndkcdev/test'
 rm -rf testzndkcdev.o testzndkcdev *~
-make[1]: Leaving directory '/home/<foo>/work/learning/linux/chrdev/test'
-/home/<foo>/work/learning/linux/chrdev
-~/work/learning/linux/chrdev$ 
-~/work/learning/linux/chrdev$ 
-~/work/learning/linux/chrdev$ make depend
+make[1]: Leaving directory '/home/<foo>/work/learning/linux/chrdev/zndkcdev/test'
+/home/<foo>/work/learning/linux/chrdev/zndkcdev
+
+~/work/learning/linux/chrdev/zndkcdev$ make depend
 ---------- drv
-make[1]: Entering directory '/home/<foo>/work/learning/linux/chrdev/drv'
+make[1]: Entering directory '/home/<foo>/work/learning/linux/chrdev/zndkcdev/drv'
 make[1]: *** No rule to make target 'depend'.  Stop.
-make[1]: Leaving directory '/home/<foo>/work/learning/linux/chrdev/drv'
-/home/<foo>/work/learning/linux/chrdev
+make[1]: Leaving directory '/home/<foo>/work/learning/linux/chrdev/zndkcdev/drv'
+/home/<foo>/work/learning/linux/chrdev/zndkcdev
 ---------- lib
-make[1]: Entering directory '/home/<foo>/work/learning/linux/chrdev/lib'
+make[1]: Entering directory '/home/<foo>/work/learning/linux/chrdev/zndkcdev/lib'
 rm -rf Makefile.depend
-gcc -MM -MG -c -fPIC -Wall -Werror -I. -I../drv libzndkcdev.c > Makefile.depend
-make[1]: Leaving directory '/home/<foo>/work/learning/linux/chrdev/lib'
-/home/<foo>/work/learning/linux/chrdev
+gcc -MM -MG -fPIC -Wall -Werror -I. -I../drv libzndkcdev.c > Makefile.depend
+make[1]: Leaving directory '/home/<foo>/work/learning/linux/chrdev/zndkcdev/lib'
+/home/<foo>/work/learning/linux/chrdev/zndkcdev
 ---------- test
-make[1]: Entering directory '/home/<foo>/work/learning/linux/chrdev/test'
+make[1]: Entering directory '/home/<foo>/work/learning/linux/chrdev/zndkcdev/test'
 rm -rf Makefile.depend
 gcc -MM -MG -c -Wall -Werror -I. -I../lib testzndkcdev.c > Makefile.depend
-make[1]: Leaving directory '/home/<foo>/work/learning/linux/chrdev/test'
-/home/<foo>/work/learning/linux/chrdev
+make[1]: Leaving directory '/home/<foo>/work/learning/linux/chrdev/zndkcdev/test'
+/home/<foo>/work/learning/linux/chrdev/zndkcdev
 
-~/work/learning/linux/chrdev$ make
+~/work/learning/linux/chrdev/zndkcdev$ make
 ---------- drv
-make[1]: Entering directory '/home/<foo>/work/learning/linux/chrdev/drv'
-make -C /lib/modules/4.2.0-36-generic/build/ M=/home/<foo>/work/learning/linux/chrdev/drv modules
+make[1]: Entering directory '/home/<foo>/work/learning/linux/chrdev/zndkcdev/drv'
+make -C /lib/modules/4.2.0-36-generic/build/ M=/home/<foo>/work/learning/linux/chrdev/zndkcdev/drv modules
 make[2]: Entering directory '/usr/src/linux-headers-4.2.0-36-generic'
-  CC [M]  /home/<foo>/work/learning/linux/chrdev/drv/zndkcdev.o
+  CC [M]  /home/<foo>/work/learning/linux/chrdev/zndkcdev/drv/zndkcdev.o
   Building modules, stage 2.
   MODPOST 1 modules
-  CC      /home/<foo>/work/learning/linux/chrdev/drv/zndkcdev.mod.o
-  LD [M]  /home/<foo>/work/learning/linux/chrdev/drv/zndkcdev.ko
+  CC      /home/<foo>/work/learning/linux/chrdev/zndkcdev/drv/zndkcdev.mod.o
+  LD [M]  /home/<foo>/work/learning/linux/chrdev/zndkcdev/drv/zndkcdev.ko
 make[2]: Leaving directory '/usr/src/linux-headers-4.2.0-36-generic'
-make[1]: Leaving directory '/home/<foo>/work/learning/linux/chrdev/drv'
-/home/<foo>/work/learning/linux/chrdev
+make[1]: Leaving directory '/home/<foo>/work/learning/linux/chrdev/zndkcdev/drv'
+/home/<foo>/work/learning/linux/chrdev/zndkcdev
 ---------- lib
-make[1]: Entering directory '/home/<foo>/work/learning/linux/chrdev/lib'
-gcc -c -fPIC -Wall -Werror -I. -I../drv libzndkcdev.c
+make[1]: Entering directory '/home/<foo>/work/learning/linux/chrdev/zndkcdev/lib'
+gcc -fPIC -Wall -Werror -I. -I../drv -c libzndkcdev.c
 gcc -shared -o libzndkcdev.so libzndkcdev.o
-make[1]: Leaving directory '/home/<foo>/work/learning/linux/chrdev/lib'
-/home/<foo>/work/learning/linux/chrdev
+make[1]: Leaving directory '/home/<foo>/work/learning/linux/chrdev/zndkcdev/lib'
+/home/<foo>/work/learning/linux/chrdev/zndkcdev
 ---------- test
-make[1]: Entering directory '/home/<foo>/work/learning/linux/chrdev/test'
+make[1]: Entering directory '/home/<foo>/work/learning/linux/chrdev/zndkcdev/test'
 gcc -c -Wall -Werror -I. -I../lib testzndkcdev.c
 gcc -L. -L../lib -o testzndkcdev testzndkcdev.o -lzndkcdev
-make[1]: Leaving directory '/home/<foo>/work/learning/linux/chrdev/test'
-/home/<foo>/work/learning/linux/chrdev
+make[1]: Leaving directory '/home/<foo>/work/learning/linux/chrdev/zndkcdev/test'
+/home/<foo>/work/learning/linux/chrdev/zndkcdev
 
-~/work/learning/linux/chrdev$ make install
+~/work/learning/linux/chrdev/zndkcdev$ make install
 sudo insmod drv/zndkcdev.ko
+[sudo] password for <foo>: 
 sudo cp lib/libzndkcdev.so /usr/lib/
 sudo chown <foo> /usr/lib/libzndkcdev.so
 sudo chown <foo> /dev/zndkcdev*
 ########## lsmod    ##########
 zndkcdev               16384  0
 ########## /dev     ##########
-crw-------  1 <foo>    root    243,   0 May 21 18:23 zndkcdev_0
-crw-------  1 <foo>    root    243,   1 May 21 18:23 zndkcdev_1
+crw-------  1 <foo>    root    242,   0 May 21 18:56 zndkcdev_0
+crw-------  1 <foo>    root    242,   1 May 21 18:56 zndkcdev_1
 
-~/work/learning/linux/chrdev$ cd ./test/
+~/work/learning/linux/chrdev/zndkcdev/test$ cd ./test/
 
-~/work/learning/linux/chrdev/test$ ./testzndkcdev 
+~/work/learning/linux/chrdev/zndkcdev/test$ ./testzndkcdev 
  zndkcdev_open(): open
  zndkcdev_get_version(): ioctl: get vresion
   -> zndkcdev driver version: 0.0.1
@@ -136,33 +136,33 @@ crw-------  1 <foo>    root    243,   1 May 21 18:23 zndkcdev_1
   -> _test_zndkcdev_callback(): signum=10, si_int=12345
  zndkcdev_close(): close
 
-~/work/learning/linux/chrdev/test$ cd ..
+~/work/learning/linux/chrdev/zndkcdev/test$ cd ..
 
-~/work/learning/linux/chrdev$ make uninstall
+~/work/learning/linux/chrdev/zndkcdev$ make uninstall
 sudo  rm    /usr/lib/libzndkcdev.so
 sudo  rmmod drv/zndkcdev.ko
 
-~/work/learning/linux/chrdev$ sudo dmesg -c
-[23518.088762]  zndkcdev[--]: zndkcdev_init(): ##### INIT  #####
-[23518.088769]  zndkcdev[--]: zndkcdev_init(): 0.0.1
-[23524.905314]  zndkcdev[ 0]: zndkcdev_open(): major=243, minor=0
-[23524.905468]  zndkcdev[ 0]: zndkcdev_ioctl: ioctl: ZNDKCDEV_GET_VERSION
-[23524.905471]   -> zndkcdev version 0.0.1
-[23524.905605]  zndkcdev[ 0]: zndkcdev_write()
-[23524.905779]  zndkcdev[ 0]: zndkcdev_read()
-[23524.905920]  zndkcdev[ 0]: zndkcdev_write()
-[23524.906048]  zndkcdev[ 0]: zndkcdev_read()
-[23524.910584]  zndkcdev[ 0]: zndkcdev_mmap(): len_buf=00100000, mmap size requested:00100000
-[23524.910605] x86/PAT: testzndkcdev:9975 map pfn RAM range req uncached-minus for [mem 0x39e00000-0x39efffff], got write-back
-[23524.910787]  zndkcdev[ 0]: zndkcdev_read()
-[23524.910799]  zndkcdev[ 0]: zndkcdev_ioctl: ioctl: ZNDKCDEV_BUF_WR
-[23524.910816]  zndkcdev[ 0]: zndkcdev_ioctl: ioctl: ZNDKCDEV_BUF_RD
-[23524.911016]  zndkcdev[ 0]: zndkcdev_ioctl: ioctl: ZNDKCDEV_SIGNAL
-[23524.911019]  zndkcdev_send_signal(): send SIGNAL: signum=10, si_int=12345
-[23525.912721]  zndkcdev[ 0]: zndkcdev_close()
-[23532.016231]  zndkcdev[--]: _zndkcdev_cleanup(): ----- start -----
-[23532.027841]  _zndkcdev_cleanup(): ----- done  -----
-[23532.027845]  zndkcdev[--]: zndkcdev_exit(): ##### EXIT  #####
+~/work/learning/linux/chrdev/zndkcdev$ sudo dmesg -c
+[25463.515719]  zndkcdev[--]: zndkcdev_init(): ##### INIT  #####
+[25463.515725]  zndkcdev[--]: zndkcdev_init(): 0.0.1
+[25468.605999]  zndkcdev[ 0]: zndkcdev_open(): major=242, minor=0
+[25468.606045]  zndkcdev[ 0]: zndkcdev_ioctl: ioctl: ZNDKCDEV_GET_VERSION
+[25468.606047]   -> zndkcdev version 0.0.1
+[25468.606062]  zndkcdev[ 0]: zndkcdev_write()
+[25468.606119]  zndkcdev[ 0]: zndkcdev_read()
+[25468.606130]  zndkcdev[ 0]: zndkcdev_write()
+[25468.606142]  zndkcdev[ 0]: zndkcdev_read()
+[25468.606169]  zndkcdev[ 0]: zndkcdev_mmap(): len_buf=00100000, mmap size requested:00100000
+[25468.606181] x86/PAT: testzndkcdev:13528 map pfn RAM range req uncached-minus for [mem 0x39e00000-0x39efffff], got write-back
+[25468.606298]  zndkcdev[ 0]: zndkcdev_read()
+[25468.606321]  zndkcdev[ 0]: zndkcdev_ioctl: ioctl: ZNDKCDEV_BUF_WR
+[25468.606350]  zndkcdev[ 0]: zndkcdev_ioctl: ioctl: ZNDKCDEV_BUF_RD
+[25468.606482]  zndkcdev[ 0]: zndkcdev_ioctl: ioctl: ZNDKCDEV_SIGNAL
+[25468.606485]  zndkcdev_send_signal(): send SIGNAL: signum=10, si_int=12345
+[25469.606865]  zndkcdev[ 0]: zndkcdev_close()
+[25474.715832]  zndkcdev[--]: _zndkcdev_cleanup(): ----- start -----
+[25474.716245]  _zndkcdev_cleanup(): ----- done  -----
+[25474.716248]  zndkcdev[--]: zndkcdev_exit(): ##### EXIT  #####
 
-~/work/learning/linux/chrdev$ 
+~/work/learning/linux/chrdev/zndkcdev$ 
 ```
